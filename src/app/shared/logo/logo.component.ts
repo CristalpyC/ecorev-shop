@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-logo',
   standalone: true,
   imports: [
-    CommonModule,
+    CommonModule
   ],
   templateUrl: './logo.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
