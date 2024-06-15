@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [
     CommonModule,
   ],
-  templateUrl: './card.component.html',
+  templateUrl: './productCard.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent { }

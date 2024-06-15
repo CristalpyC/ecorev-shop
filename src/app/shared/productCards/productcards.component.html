@@ -1,0 +1,7 @@
+@for (item of productItems; track $index){
+    <div>
+        <p>Nombre: {{ item.name }}</p>
+        <p>Precio: {{ item.price }}</p>
+        <img class="w-[20%] max-h[10%]" [src]="item.img" alt="">
+    </div>
+}

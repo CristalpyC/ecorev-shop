@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
-  selector: 'app-logo',
+  selector: 'app-footer',
   standalone: true,
   imports: [
     CommonModule,
+    LogoComponent,
   ],
-  templateUrl: './logo.component.html',
+  templateUrl: './footer.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LogoComponent { }
+export class FooterComponent { }
