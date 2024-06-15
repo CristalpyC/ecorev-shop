@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
+import { FormComponent } from '../form/form.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,7 @@ import { LogoComponent } from '../logo/logo.component';
   imports: [
     CommonModule,
     LogoComponent,
+    FormComponent,
   ],
   templateUrl: './footer.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

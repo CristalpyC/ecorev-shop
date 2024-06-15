@@ -14,9 +14,4 @@ export const routes: Routes = [
         title: 'EcoRev - shop',
         component: ProductsComponent
     },
-    {
-        path: 'card',
-        title: 'Card',
-        component: CardComponent
-    }
 ];
