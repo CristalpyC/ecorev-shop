@@ -1,0 +1,14 @@
+<div class="flex gap-3 flex-wrap justify-center items-center mt-5">
+@for (item of productItems; track $index){
+    <div class="bg-[#fafffbb2] shadow-lg w-[100%] sm:w-[80%] md:w-[40%] lg:w-[30%] p-5">
+
+        <img class="mb-2 flex flex-col justify-center items-center w-[100%] max-h[5rem]" [src]="item.img" alt="">
+        <p class="text-[#454343]">{{ item.name }}</p>
+
+        <div class="flex justify-between">
+            <p class="text-[#06430ca5] font-bold">${{ item.price }}</p>
+            <button (click)="addProduct(item)" class="text-[#06430ca5] text-[2rem] hover:scale-[1.4]">+</button>
+        </div>
+    </div>
+}
+</div>

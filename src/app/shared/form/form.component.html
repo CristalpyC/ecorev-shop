@@ -1,0 +1,21 @@
+<form class="flex flex-col font-tillana mt-5">
+    <h3 class="mb-3 text-center font-bold">¡Contáctanos!</h3>
+
+    <!--Validación de datos-->
+    <input type="text" placeholder="Nombre" [formControl]="name" required class="w-[100%] text-[#45434396] mb-3 p-3 shadow-lg outline-none bg-[#ebfff7b7]"/>
+    <p class="text-red-400 mb-5 italic" [hidden]="name.valid || name.pristine">El nombre es requerido</p>
+
+    <input type="email" placeholder="Email" [formControl]="email" required class="w-[100%] text-[#45434396] mb-3 p-3 shadow-lg outline-none bg-[#ebfff7b7]"/> 
+    <div class="text-red-400 mb-5 italic" [hidden]="email.valid || email.pristine">
+        @if(email.errors?.['required']){
+            <p>El email es obligatorio</p>
+        } @else if(email.errors?.['email']){
+            <p>El email debe ser válido</p>
+        }
+    </div>
+
+    <textarea rows="8" cols="40" [formControl]="message" placeholder="Mensaje" required class="w-[100%] text-[#45434396] mb-3 p-3 shadow-lg outline-none bg-[#ebfff7b7]"></textarea>
+    <p class="text-red-400 mb-5 italic" [hidden]="message.valid || message.pristine">El mensaje es requerido</p>
+
+    <button (click)="alert()" type="button" class="w-[100%] text-white mb-3 p-2 shadow-lg outline-none bg-[#06430C]">Enviar</button>
+</form>

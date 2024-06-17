@@ -1,0 +1,5 @@
+<div class="flex p-5 mt-[3rem] flex-wrap gap-5 justify-center items-center">
+    @for (url of images; track $index){
+        <img class="shadow-md w-[80%] sm:w-[70%] md:w-[40%] lg:w-[20%] max-h-[15rem] ease-in-out duration-1000 hover:scale-[.8]" [src]="url" alt="product image">
+    }
+</div>

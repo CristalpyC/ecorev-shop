@@ -1,7 +1,26 @@
-<header>
-    <nav>
+<!-- Menú móvil -->
+@if (isMobileMenuOpen) {
+    <div class="lg:hidden md:hidden custom:hidden sm:hidden flex flex-col bg-[#BDE2C0] p-5">
+        <i class="fas fa-times text-gray-600 mt-3 mb-5 text-right" (click)="closeMenu()"></i>
+        <a class="w-full block bg-[#246B2B] h-[2.5rem] p-2 text-white text-center ease-in-out duration-1000 hover:bg-[#5D9763] mb-2" [routerLink]="menuItems[1]">
+            Ordenar productos
+        </a>
+        <app-modal />
+    </div>
+}
+
+<!-- Menú normal -->
+<header class="p-5 bg-[#BDE2C0] flex justify-between font-tillana text-[1.2rem]">
+    <!--Logo component-->
+    <a [routerLink]="menuItems[0]">
         <app-logo />
-        <button>Ordenar productos</button>
-        <p>Card</p>
+    </a>
+    <nav class="flex gap-5 ">
+        <!--Routes!-->
+        <a class="hidden lg:block md:block custom:block sm:block bg-[#246B2B] h-[2.5rem] p-2 text-white ease-in-out duration-1000 hover:bg-[#5D9763]" [routerLink]="menuItems[1]">Ordenar productos</a>
+        <app-modal />
+
+        <i (click)="openMenu()" class="fas fa-bars text-gray-600 block lg:hidden md:hidden custom:hidden sm:hidden mt-3"></i>
     </nav>
 </header>
+
