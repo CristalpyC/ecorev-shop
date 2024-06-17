@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
 import { RouterModule } from '@angular/router';
 import { routes } from '../../app.routes';
-import { ModalService } from '../../services/modal/modal.service';
 import { ModalComponent } from '../modal/modal.component';
 
 @Component({
@@ -19,6 +18,17 @@ import { ModalComponent } from '../modal/modal.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuComponent {  
+  public isMobileMenuOpen = false; //Estado inicial: Establece la vista del menú móvil como false
+
   public menuItems = routes
     .map(route => route.path);
+  
+  //Método para abrir y cerrar menú móvil
+  public closeMenu(){
+    this.isMobileMenuOpen = false;
+  }
+
+  public openMenu(){
+    this.isMobileMenuOpen = true;
+  }
 }

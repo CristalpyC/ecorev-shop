@@ -25,8 +25,8 @@ export class FormComponent {
     if(!this.name.errors?.['required'] && !this.email.errors?.['required'] && !this.message.errors?.['email'] && !this.message.errors?.['required']){
       this.showAlert.timeAlert('success','¡Gracias por contactarnos!','Mensaje enviado');
     } else{
-      this.showAlert.timeAlert('error','Error','Complete los datos');
-    } //cristaltn03@gmail.com
+      this.showAlert.timeAlert('error','Complete los datos','Error');
+    }
   }
 
 }

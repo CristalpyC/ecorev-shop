@@ -18,8 +18,4 @@ export class HomeImagesComponent {
     '../../../assets/images/eco-shirt.webp',
     '../../../assets/images/eco-phone.jpg'
   ];
-
-  constructor(){
-    console.log(this.images)
-  }
 }
