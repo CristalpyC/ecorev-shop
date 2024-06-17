@@ -11,7 +11,7 @@ module.exports = {
     },
     fontFamily: {
       'syne': ['"Syne"', 'system-ui', 'sans-serif'],
-      'tillana': ['"Tillana"', 'system-ui', 'sans-serif']
+      'tillana': ['"Tillana"', 'system-ui', 'sans-serif'],
     },
     
   },

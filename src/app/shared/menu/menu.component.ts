@@ -4,6 +4,7 @@ import { LogoComponent } from '../logo/logo.component';
 import { RouterModule } from '@angular/router';
 import { routes } from '../../app.routes';
 import { ModalService } from '../../services/modal/modal.service';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-menu',
@@ -11,18 +12,13 @@ import { ModalService } from '../../services/modal/modal.service';
   imports: [
     CommonModule,
     LogoComponent,
-    RouterModule
+    RouterModule,
+    ModalComponent,
   ],
   templateUrl:'./menu.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuComponent {  
   public menuItems = routes
-    .map(route => route.path)
-
-  constructor( public modalService: ModalService){}
-
-  showModal() {
-    this.modalService.showModal();
-  }
+    .map(route => route.path);
 }
