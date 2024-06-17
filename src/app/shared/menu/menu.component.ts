@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
 import { RouterModule } from '@angular/router';
 import { routes } from '../../app.routes';
+import { ModalService } from '../../services/modal/modal.service';
 
 @Component({
   selector: 'app-menu',
@@ -19,7 +20,9 @@ export class MenuComponent {
   public menuItems = routes
     .map(route => route.path)
 
-  constructor(){
-    console.log(this.menuItems[1])
+  constructor( public modalService: ModalService){}
+
+  showModal() {
+    this.modalService.showModal();
   }
 }

@@ -6,7 +6,8 @@
     <nav class="flex gap-5 ">
         <!--Routes!-->
         <a class="hidden lg:block md:block custom:block sm:block bg-[#246B2B] h-[2.5rem] p-2 text-white ease-in-out duration-1000 hover:bg-[#5D9763]" [routerLink]="menuItems[1]">Ordenar productos</a>
-        <i class="mt-3 hidden lg:block md:block custom:block sm:block fas fa-shopping-cart ease-in-out duration-1000 hover:scale-[1.2]"></i>
+        <i (click)="showModal()" class="mt-3 hidden lg:block md:block custom:block sm:block fas fa-shopping-cart ease-in-out duration-1000 hover:scale-[1.2]"></i>
+
         <i class="fas fa-bars text-gray-600 block lg:hidden md:hidden custom:hidden sm:hidden mt-3"></i>
     </nav>
 </header>
