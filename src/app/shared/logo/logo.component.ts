@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [
     CommonModule,
   ],
-  templateUrl: './logo.component.html',
+  template: `<img class="w-[8rem]" src="../../../assets/images/logo.png" alt="">`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoComponent { }
